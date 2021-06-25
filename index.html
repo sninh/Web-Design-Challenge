@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- bootstrap's responsive meta tag -->
+
+    <title>Latitude - Latitude Analysis Dashboard with Attitude</title>
+
+    <!-- bootstrap css links and script -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css" integrity="sha384-8iuq0iaMHpnH2vSyvZMSIqQuUnQA7QM+f6srIdlgBrTSEyd//AWNMyEaSF2yPzNQ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-dark">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <a class="navbar-brand" href="index.html">Latitude</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="max_lat.html">Max Temperature</a>
+                        <a class="dropdown-item" href="hum_lat.html">Humidity</a>
+                        <a class="dropdown-item" href="cloud_lat.html">Cloudiness</a>
+                        <a class="dropdown-item" href="wind_lat.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="comparisons.html">Comparison</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- main content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-7 mt-5">
+                <div class="card">
+                    <h4 class="card-header text-info">Summary: Latitude vs. X</h4>
+                    <div class="card-body">
+                        <img id="img-wrap" class="img-fluid img-center" src="assets/images/Fig1.png" Title="Lat vs Temp" width="400">
+                        <p class="card-text font-weight-light">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                        <p class="card-text font-weight-light">After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as the explanations and descriptions of any trends and correlations witnessed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-5 mt-5">
+                <div class="card">
+                    <h4 class="card-header text-info">Visualizations</h4>
+                    <div class="card-body">
+
+                        <div class="row pb-3">
+                            <div class="col-md-6">
+                                <a href="max_lat.html"><img class="img-fluid img-center viz-box" src="Images/Fig1.png" title="Lat vs. Max Temp" width="400"></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="hum_lat.html"><img class="img-fluid img-center viz-box" src="Images/Fig2.png" title="Lat vs. Humidity" width="400"></a>
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-md-6">
+                                <a href="cloud_lat.html"><img class="img-fluid img-center viz-box" src="Images/Fig3.png" title="Lat vs. Cloudiness" width="400"></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="wind_lat.html"><img class="img-fluid img-center viz-box" src="Images/Fig4.png" title="Lat vs. Wind Speed" width="400"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
